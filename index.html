@@ -8,41 +8,38 @@
   --ju-teal: #55AAA7;
   --ju-teal-dark: #357a77;
   --ju-teal-light: #e6f5f4;
-  --ju-teal-pale: #f2fafa;
   --ju-gold: #FFB500;
   --ju-gold-pale: #fff8e0;
-  --ju-darkblue: #003865;
+  --f: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: var(--font-sans); }
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--f); }
 
 .sticky-nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--color-background-primary);
-  border-bottom: 1px solid var(--ju-purple-light);
-  padding: 10px 1rem 8px;
+  background: #6b1260;
+  padding: 10px 1rem 9px;
 }
-.nav-pills { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 6px; }
-.nav-pill { font-size: 11px; padding: 4px 11px; border-radius: 20px; border: 1px solid var(--ju-purple); background: var(--ju-purple-pale); color: var(--ju-purple); cursor: pointer; white-space: nowrap; }
-.nav-pill:hover { background: var(--ju-purple-light); }
-.nav-pill.active { background: var(--ju-purple); border-color: var(--ju-purple); color: #fff; }
-.progress-bar-wrap { height: 3px; background: var(--ju-purple-light); border-radius: 2px; }
+.nav-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin-bottom: 7px; }
+.nav-pill { font-size: 12px; padding: 5px 13px; border-radius: 20px; border: 1.5px solid rgba(255,255,255,0.4); background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); cursor: pointer; white-space: nowrap; font-family: var(--f); }
+.nav-pill:hover { background: rgba(255,255,255,0.2); }
+.nav-pill.active { background: #fff; border-color: #fff; color: var(--ju-purple-dark); font-weight: 500; }
+.progress-bar-wrap { height: 3px; background: rgba(255,255,255,0.2); border-radius: 2px; }
 .progress-bar { height: 3px; background: var(--ju-teal); border-radius: 2px; transition: width 0.3s; }
 
-.guide { max-width: 780px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+.guide { max-width: 780px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
 .guide-header { border-left: 4px solid var(--ju-teal); padding: 0.5rem 0 0.5rem 1rem; margin-bottom: 1.5rem; }
-.guide-header .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ju-teal-dark); margin-bottom: 4px; }
-.guide-header h1 { font-size: 20px; font-weight: 500; color: var(--ju-purple); }
-.guide-header p { font-size: 14px; color: var(--ju-purple-dark); margin-top: 4px; }
+.guide-header .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ju-teal-dark); margin-bottom: 4px; }
+.guide-header h1 { font-size: 22px; font-weight: 500; color: var(--ju-purple); }
+.guide-header p { font-size: 15px; color: var(--ju-purple-dark); margin-top: 5px; }
 
-.section { margin-bottom: 1rem; border-radius: 12px; border: 1px solid #d9a8d3; background: var(--color-background-primary); }
+.section { margin-bottom: 1rem; border-radius: 12px; border: 1px solid #d9a8d3; background: #fff; }
 .section-header { padding: 1rem 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; background: var(--ju-purple-pale); border-radius: 12px; user-select: none; transition: background 0.15s; }
 .section-header:hover { background: var(--ju-purple-light); }
 .section.open .section-header { border-radius: 12px 12px 0 0; }
 .section-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ju-teal-dark); margin-bottom: 3px; }
-.section-title { font-size: 15px; font-weight: 500; color: var(--ju-purple); }
+.section-title { font-size: 16px; font-weight: 500; color: var(--ju-purple); }
 .chevron { font-size: 12px; color: var(--ju-purple); transition: transform 0.2s; }
 .chevron.open { transform: rotate(180deg); }
 
@@ -50,41 +47,40 @@ body { font-family: var(--font-sans); }
 .section-body.open { max-height: 4000px; }
 .section-inner { padding: 1.25rem; border-top: 1px solid var(--ju-purple-light); }
 
-.source-quote { background: var(--ju-gold-pale); border-left: 3px solid var(--ju-gold); padding: 0.8rem 1rem; margin: 0.9rem 0; font-size: 13px; font-style: italic; color: #3a2e00; line-height: 1.75; }
-.source-attr { font-size: 11px; font-style: normal; color: #7a6200; margin-top: 6px; font-weight: 500; }
-.session-note { background: var(--ju-teal-light); border-left: 3px solid var(--ju-teal); padding: 0.8rem 1rem; font-size: 13px; color: #003330; line-height: 1.75; margin: 0.9rem 0; }
-.note-label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ju-teal-dark); margin-bottom: 4px; }
-.body-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.75; margin-bottom: 1rem; }
-.body-sm { font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; margin-bottom: 1rem; }
+.source-quote { background: var(--ju-gold-pale); border-left: 3px solid var(--ju-gold); padding: 0.85rem 1rem; margin: 1rem 0; font-size: 14px; font-style: italic; color: #3a2e00; line-height: 1.8; }
+.source-attr { font-size: 12px; font-style: normal; color: #7a6200; margin-top: 6px; font-weight: 500; }
+.session-note { background: var(--ju-teal-light); border-left: 3px solid var(--ju-teal); padding: 0.85rem 1rem; font-size: 14px; color: #003330; line-height: 1.8; margin: 1rem 0; }
+.note-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ju-teal-dark); margin-bottom: 5px; }
+.body-text { font-size: 15px; color: #1a1a1a; line-height: 1.8; margin-bottom: 1rem; }
+.body-sm { font-size: 14px; color: #444; line-height: 1.7; margin-bottom: 1rem; }
 .divider { border: none; border-top: 1px solid var(--ju-purple-light); margin: 1.1rem 0; }
 
 .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin-bottom: 1rem; }
-.concept-card { background: var(--ju-purple-pale); border: 1px solid #d9a8d3; border-radius: 8px; padding: 0.85rem 1rem; cursor: pointer; transition: background 0.15s; }
+.concept-card { background: var(--ju-purple-pale); border: 1px solid #d9a8d3; border-radius: 8px; padding: 0.9rem 1rem; cursor: pointer; transition: background 0.15s; }
 .concept-card:hover { background: var(--ju-purple-light); }
 .concept-card.active { background: var(--ju-purple); border-color: var(--ju-purple); }
-.concept-card h3 { font-size: 13px; font-weight: 500; color: var(--ju-purple); }
+.concept-card h3 { font-size: 14px; font-weight: 500; color: var(--ju-purple); }
 .concept-card.active h3 { color: #fff; }
-.concept-card p { font-size: 12px; color: var(--ju-purple-dark); margin-top: 3px; line-height: 1.45; }
+.concept-card p { font-size: 13px; color: var(--ju-purple-dark); margin-top: 3px; line-height: 1.45; }
 .concept-card.active p { color: rgba(255,255,255,0.75); }
 .detail-panel { display: none; background: #fff; border: 1px solid #d9a8d3; border-radius: 8px; padding: 1.1rem; margin-bottom: 1rem; }
 .detail-panel.visible { display: block; }
-.detail-panel h4 { font-size: 14px; font-weight: 500; color: var(--ju-purple); margin-bottom: 0.75rem; }
-.tag { display: inline-block; font-size: 11px; padding: 2px 9px; border-radius: 12px; margin-right: 4px; margin-bottom: 6px; font-weight: 500; }
+.detail-panel h4 { font-size: 15px; font-weight: 500; color: var(--ju-purple); margin-bottom: 0.75rem; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; border-radius: 12px; margin-right: 4px; margin-bottom: 6px; font-weight: 500; }
 .tag-theory { background: var(--ju-purple-pale); color: var(--ju-purple); border: 1px solid #d9a8d3; }
 .tag-source { background: var(--ju-teal-light); color: var(--ju-teal-dark); border: 1px solid var(--ju-teal); }
 
 .bloom-container { display: flex; flex-direction: column; gap: 3px; margin: 1rem 0; }
-.bloom-level { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
+.bloom-level { display: flex; align-items: center; gap: 12px; padding: 9px 14px; border-radius: 8px; cursor: pointer; }
 .bloom-level:hover { opacity: 0.88; }
-.bloom-label { font-size: 13px; font-weight: 500; flex: 0 0 110px; }
-.bloom-examples { font-size: 12px; }
-.bloom-detail { display: none; margin-top: 4px; padding: 10px 12px; background: var(--ju-purple-pale); border-radius: 8px; font-size: 13px; color: var(--ju-purple-dark); line-height: 1.65; }
+.bloom-label { font-size: 14px; font-weight: 500; flex: 0 0 110px; }
+.bloom-examples { font-size: 13px; }
+.bloom-detail { display: none; margin-top: 4px; padding: 10px 14px; background: var(--ju-purple-pale); border-radius: 8px; font-size: 14px; color: var(--ju-purple-dark); line-height: 1.7; }
 .bloom-detail.visible { display: block; }
 
-.frameworks-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 1rem 0; }
-.frameworks-table th { background: var(--ju-purple); color: #fff; padding: 8px 10px; text-align: left; font-weight: 500; font-size: 12px; }
-.frameworks-table th:first-child { border-radius: 0; }
-.frameworks-table td { padding: 7px 10px; border-bottom: 1px solid var(--ju-purple-light); vertical-align: top; line-height: 1.55; color: var(--color-text-primary); }
+.frameworks-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 1rem 0; }
+.frameworks-table th { background: var(--ju-purple); color: #fff; padding: 9px 11px; text-align: left; font-weight: 500; font-size: 13px; }
+.frameworks-table td { padding: 8px 11px; border-bottom: 1px solid var(--ju-purple-light); vertical-align: top; line-height: 1.6; color: #1a1a1a; }
 .frameworks-table tr:nth-child(even) td { background: var(--ju-purple-pale); }
 .highlight-row td { font-weight: 500; color: var(--ju-teal-dark); }
 
@@ -92,25 +88,25 @@ body { font-family: var(--font-sans); }
 .compare-card { border-radius: 8px; padding: 1rem; border: 1px solid #d9a8d3; }
 .compare-card.winner { background: var(--ju-purple); border-color: var(--ju-purple); }
 .compare-card.neutral { background: var(--ju-purple-pale); }
-.compare-card h4 { font-size: 13px; font-weight: 500; margin-bottom: 8px; }
+.compare-card h4 { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
 .compare-card.winner h4 { color: var(--ju-gold); }
 .compare-card.neutral h4 { color: var(--ju-purple-dark); }
 .compare-card ul { list-style: none; padding: 0; }
-.compare-card ul li { font-size: 12px; padding: 3px 0; border-bottom: 1px solid rgba(0,0,0,0.07); line-height: 1.5; }
+.compare-card ul li { font-size: 13px; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.07); line-height: 1.5; }
 .compare-card.winner ul li { color: rgba(255,255,255,0.88); border-bottom-color: rgba(255,255,255,0.12); }
 .compare-card.neutral ul li { color: var(--ju-purple-dark); }
-.effect-badge { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 20px; }
+.effect-badge { display: inline-block; margin-top: 9px; font-size: 13px; font-weight: 500; padding: 4px 11px; border-radius: 20px; }
 .compare-card.winner .effect-badge { background: var(--ju-teal); color: #fff; }
 .compare-card.neutral .effect-badge { background: var(--ju-purple-light); color: var(--ju-purple); }
 
 .reflection-box { border: 1.5px dashed var(--ju-teal); border-radius: 8px; padding: 1rem; margin-top: 1rem; }
-.reflection-prompt { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ju-teal-dark); margin-bottom: 4px; }
-.reflection-box p { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 8px; line-height: 1.6; }
-.reflection-box textarea { width: 100%; min-height: 65px; font-size: 13px; font-family: var(--font-sans); border: 1px solid #d9a8d3; border-radius: 8px; padding: 8px 10px; background: var(--color-background-primary); color: var(--color-text-primary); resize: vertical; }
+.reflection-prompt { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ju-teal-dark); margin-bottom: 5px; }
+.reflection-box p { font-size: 14px; color: #444; margin-bottom: 8px; line-height: 1.65; }
+.reflection-box textarea { width: 100%; min-height: 70px; font-size: 14px; font-family: var(--f); border: 1px solid #d9a8d3; border-radius: 8px; padding: 8px 10px; background: #fff; color: #1a1a1a; resize: vertical; }
 </style>
 
 <div class="sticky-nav">
-  <div class="nav-pills" id="navPills">
+  <div class="nav-pills">
     <div class="nav-pill active" data-target="s0">Session approach</div>
     <div class="nav-pill" data-target="s1">Global frameworks</div>
     <div class="nav-pill" data-target="s2">Core concepts</div>
@@ -123,7 +119,7 @@ body { font-family: var(--font-sans); }
 </div>
 
 <div class="guide">
-  <h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;">Interactive guided reading: Active Learning in Higher Education</h2>
+  <h2 style="position:absolute;width:1px;height:1px;overflow:hidden;">Interactive guided reading: Active Learning in Higher Education</h2>
   <div class="guide-header">
     <div class="eyebrow">Guided reading session</div>
     <h1>Active Learning in Higher Education</h1>
@@ -135,16 +131,14 @@ body { font-family: var(--font-sans); }
       <div><div class="section-eyebrow">Session approach</div><div class="section-title">What is guided reading?</div></div>
       <div class="chevron" id="chev-s0">▼</div>
     </div>
-    <div class="section-body" id="body-s0">
-      <div class="section-inner">
-        <p class="body-text">This session used guided reading as its primary method. Rather than presenting a lecture about active learning, the instructor read selectively from the course literature alongside participants, pausing at key moments to prompt note-taking, small group discussion, and reflection. The aim was to build a shared <em>conceptual understanding</em> of core terms before exploring specific strategies in later sessions.</p>
-        <div class="session-note"><div class="note-label">Instructor — session opening</div>"The purpose here is that we collect information from this and the articles, so that later on in the session today we can actually gather it and perhaps even make notes together."</div>
-        <hr class="divider">
-        <p class="body-sm">The session worked through two core texts: the introductory chapter from <em>Active Learning Strategies in Higher Education</em> and Chapter 2 by Stetson-Tiligadas, "Designing for Active Learning: A Problem-Centered Approach." The Cambridge Assessment brief on active learning was used as a secondary anchor text.</p>
-        <div class="source-quote">"This chapter concerns itself primarily with questions of how students in higher education studies can best acquire, apply, create, and share knowledge."<div class="source-attr">Active Learning Strategies in Higher Education — chapter opening, read aloud during session</div></div>
-        <div class="source-quote">"As instructors in higher education, our teaching is grounded in our conceptions of how people learn. We must be mindful that, for most of our students, the academy will not be their career destination. Our students will move into the world of service and the world of work, where they will need to know how to function well."<div class="source-attr">Active Learning Strategies in Higher Education</div></div>
-      </div>
-    </div>
+    <div class="section-body" id="body-s0"><div class="section-inner">
+      <p class="body-text">This session used guided reading as its primary method. Rather than presenting a lecture about active learning, the instructor read selectively from the course literature alongside participants, pausing at key moments to prompt note-taking, small group discussion, and reflection. The aim was to build a shared <em>conceptual understanding</em> of core terms before exploring specific strategies in later sessions.</p>
+      <div class="session-note"><div class="note-label">Instructor — session opening</div>"The purpose here is that we collect information from this and the articles, so that later on in the session today we can actually gather it and perhaps even make notes together."</div>
+      <hr class="divider">
+      <p class="body-sm">The session worked through two core texts: the introductory chapter from <em>Active Learning Strategies in Higher Education</em> and Chapter 2 by Stetson-Tiligadas, "Designing for Active Learning: A Problem-Centered Approach." The Cambridge Assessment brief on active learning was used as a secondary anchor text.</p>
+      <div class="source-quote">"This chapter concerns itself primarily with questions of how students in higher education studies can best acquire, apply, create, and share knowledge."<div class="source-attr">Active Learning Strategies in Higher Education — chapter opening, read aloud during session</div></div>
+      <div class="source-quote">"As instructors in higher education, our teaching is grounded in our conceptions of how people learn. We must be mindful that, for most of our students, the academy will not be their career destination. Our students will move into the world of service and the world of work, where they will need to know how to function well."<div class="source-attr">Active Learning Strategies in Higher Education</div></div>
+    </div></div>
   </div>
 
   <div class="section" id="s1">
@@ -152,25 +146,23 @@ body { font-family: var(--font-sans); }
       <div><div class="section-eyebrow">Context</div><div class="section-title">Why active learning now? Global frameworks</div></div>
       <div class="chevron" id="chev-s1">▼</div>
     </div>
-    <div class="section-body" id="body-s1">
-      <div class="section-inner">
-        <p class="body-text">The session opened with a comparative overview of international frameworks — OECD, UNESCO, EU, WEF, UNICEF and others — asking which skills they identify as essential for the future.</p>
-        <div class="session-note"><div class="note-label">Instructor on the framework overview</div>"It turned out that I didn't actually need to create these categories on my own, because actually, the headings of most of these frameworks, they tend to use these six skills that I've listed here in one way or another. So basically, they're just synonyms of the headings of these frameworks."</div>
-        <table class="frameworks-table" style="margin-top:1rem;">
-          <thead><tr><th>Skill category</th><th>Recurring?</th><th>Example framings</th></tr></thead>
-          <tbody>
-            <tr class="highlight-row"><td>Social &amp; emotional skills, communication &amp; collaboration</td><td>All frameworks</td><td>Empathy, teamwork, cross-cultural skills, emotional intelligence</td></tr>
-            <tr><td>Critical thinking &amp; problem solving</td><td>Most frameworks</td><td>Cognitive skills, decision-making, complex problem solving</td></tr>
-            <tr><td>Creativity, agency &amp; co-agency</td><td>Most frameworks</td><td>Innovation, initiative, self-direction</td></tr>
-            <tr><td>Advanced literacies &amp; competencies</td><td>Most frameworks</td><td>Digital literacy, data analysis, scientific literacy</td></tr>
-            <tr><td>Global citizenship &amp; social engagement</td><td>Several frameworks</td><td>Civic responsibility, sustainable development, ethics</td></tr>
-            <tr><td>Lifelong learning</td><td>Several frameworks</td><td>Learning to learn, flexibility and adaptability</td></tr>
-          </tbody>
-        </table>
-        <div class="source-quote">"Active learning has been defined as any type of instructional method which engages students in their learning process and requires meaningful, relevant, authentic learning activities, as well as requiring students to think about what they're doing. It implies that students will eschew roles as passive participants of information and recipients of information and instead contribute actively in classes."<div class="source-attr">Prince (2004), as cited in Active Learning Strategies in Higher Education</div></div>
-        <div class="session-note"><div class="note-label">Discussion prompt used in session</div>"Are we preparing our students optimally for their career choices? — that's the question."</div>
-      </div>
-    </div>
+    <div class="section-body" id="body-s1"><div class="section-inner">
+      <p class="body-text">The session opened with a comparative overview of international frameworks — OECD, UNESCO, EU, WEF, UNICEF and others — asking which skills they identify as essential for the future.</p>
+      <div class="session-note"><div class="note-label">Instructor on the framework overview</div>"It turned out that I didn't actually need to create these categories on my own, because actually, the headings of most of these frameworks, they tend to use these six skills that I've listed here in one way or another. So basically, they're just synonyms of the headings of these frameworks."</div>
+      <table class="frameworks-table" style="margin-top:1rem;">
+        <thead><tr><th>Skill category</th><th>Recurring?</th><th>Example framings</th></tr></thead>
+        <tbody>
+          <tr class="highlight-row"><td>Social &amp; emotional skills, communication &amp; collaboration</td><td>All frameworks</td><td>Empathy, teamwork, cross-cultural skills, emotional intelligence</td></tr>
+          <tr><td>Critical thinking &amp; problem solving</td><td>Most frameworks</td><td>Cognitive skills, decision-making, complex problem solving</td></tr>
+          <tr><td>Creativity, agency &amp; co-agency</td><td>Most frameworks</td><td>Innovation, initiative, self-direction</td></tr>
+          <tr><td>Advanced literacies &amp; competencies</td><td>Most frameworks</td><td>Digital literacy, data analysis, scientific literacy</td></tr>
+          <tr><td>Global citizenship &amp; social engagement</td><td>Several frameworks</td><td>Civic responsibility, sustainable development, ethics</td></tr>
+          <tr><td>Lifelong learning</td><td>Several frameworks</td><td>Learning to learn, flexibility and adaptability</td></tr>
+        </tbody>
+      </table>
+      <div class="source-quote">"Active learning has been defined as any type of instructional method which engages students in their learning process and requires meaningful, relevant, authentic learning activities, as well as requiring students to think about what they're doing. It implies that students will eschew roles as passive participants of information and recipients of information and instead contribute actively in classes."<div class="source-attr">Prince (2004), as cited in Active Learning Strategies in Higher Education</div></div>
+      <div class="session-note"><div class="note-label">Discussion prompt used in session</div>"Are we preparing our students optimally for their career choices? — that's the question."</div>
+    </div></div>
   </div>
 
   <div class="section" id="s2">
@@ -178,60 +170,58 @@ body { font-family: var(--font-sans); }
       <div><div class="section-eyebrow">Core concepts</div><div class="section-title">Building the conceptual vocabulary</div></div>
       <div class="chevron" id="chev-s2">▼</div>
     </div>
-    <div class="section-body" id="body-s2">
-      <div class="section-inner">
-        <p class="body-sm">Select a concept to explore its definition, source text, and how it was discussed in the session.</p>
-        <div class="concept-grid">
-          <div class="concept-card" data-concept="constructivism" onclick="showConcept('constructivism')"><h3>Constructivism</h3><p>How learners build knowledge</p></div>
-          <div class="concept-card" data-concept="zpd" onclick="showConcept('zpd')"><h3>Zone of Proximal Development</h3><p>Where learning should be targeted</p></div>
-          <div class="concept-card" data-concept="scaffolding" onclick="showConcept('scaffolding')"><h3>Scaffolding</h3><p>Temporary support toward independence</p></div>
-          <div class="concept-card" data-concept="sensemaking" onclick="showConcept('sensemaking')"><h3>Sense-making</h3><p>The active process of understanding</p></div>
-          <div class="concept-card" data-concept="metacognition" onclick="showConcept('metacognition')"><h3>Metacognition</h3><p>Thinking about thinking</p></div>
-          <div class="concept-card" data-concept="cogload" onclick="showConcept('cogload')"><h3>Cognitive load</h3><p>Limits on working memory</p></div>
-        </div>
-        <div class="detail-panel" id="detail-constructivism">
-          <div><span class="tag tag-theory">Theory</span><span class="tag tag-source">Piaget / Vygotsky</span></div>
-          <h4 style="margin-top:8px;">Constructivism &amp; social constructivism</h4>
-          <div class="source-quote">"Active learning is based on a theory of learning called constructivism, which emphasises the fact that learners construct or build their understanding. Jean Piaget (1896–1980), a psychologist and founder of constructivism, researched the cognitive development of children, observing that their knowledge was individually built up, bit by bit. In the process of making meaning, children replace or adapt their existing knowledge and understanding with deeper levels of understanding."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
-          <div class="source-quote">"The theory of social constructivism says that learning happens primarily through social interaction with others, such as a teacher or a learner's peers."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
-          <div class="session-note"><div class="note-label">Session discussion</div>The instructor used nursing as an example: "Can I become a nurse by myself? It's quite difficult actually." This grounded the distinction between individual and social constructivism in a familiar professional context.</div>
-        </div>
-        <div class="detail-panel" id="detail-zpd">
-          <div><span class="tag tag-theory">Theory</span><span class="tag tag-source">Vygotsky</span></div>
-          <h4 style="margin-top:8px;">Zone of Proximal Development</h4>
-          <div class="source-quote">"Lev Vygotsky (1896–1934) described the zone of proximal development (ZPD). This is the area where learning activities should be focused, lying between what the learner can achieve independently and what the learner can achieve with expert guidance."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
-          <div class="session-note"><div class="note-label">Session framing</div>"There is something that the instructor can do — that the teacher needs to know about the participant or the student — that you have to know where to start and where to go, what they know and what they don't know. And the zone of proximal development is the concept that that's where you want to focus the energy of teaching and learning."</div>
-          <div class="session-note"><div class="note-label">Practical implication raised in session</div>"I need to start my course with a diagnostic." Knowing where students are when they arrive has very real consequences for planning and pacing.</div>
-        </div>
-        <div class="detail-panel" id="detail-scaffolding">
-          <div><span class="tag tag-theory">Theory</span><span class="tag tag-source">Bruner (not Vygotsky)</span></div>
-          <h4 style="margin-top:8px;">Scaffolding</h4>
-          <div class="source-quote">"Scaffolding describes the support a student or group of students receive as they work towards a learning goal. The idea of scaffolding was developed by cognitive psychologist Jerome Bruner (1915–2016) researching oral language acquisition in children. Grounded in social constructivism, the process of scaffolding 'enables a child or novice to solve a problem, carry out a task or achieve a goal which would be beyond his unassisted efforts' (Wood, Bruner &amp; Ross, 1976, p.90). Scaffolding learning is important to secure new knowledge and/or skills but equally, support should be withdrawn over time and when appropriate, to allow students to develop independence."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
-          <div class="session-note"><div class="note-label">Correction made in session</div>The instructor noted that scaffolding is often incorrectly attributed to Vygotsky: "it wasn't actually Vygotsky's idea, but Bruner rather."</div>
-          <div class="session-note"><div class="note-label">Participant definitions generated during session</div>"Scaffolding is a process — when a more experienced person helps another person to master a skill." / "My understanding of scaffolding is providing assistance to develop learning." / "To give support to help someone at the beginning until the person becomes independent."</div>
-          <div class="session-note"><div class="note-label">Instructor synthesis</div>"The best scaffolding — the student always feels independent, but the scaffolding is just the little thing they need... they feel that they are doing it themselves. Perhaps a key word here is also autonomy."</div>
-        </div>
-        <div class="detail-panel" id="detail-sensemaking">
-          <div><span class="tag tag-theory">Concept</span><span class="tag tag-source">Cambridge Assessment</span></div>
-          <h4 style="margin-top:8px;">Sense-making</h4>
-          <div class="source-quote">"For learners to make sense of new information and ideas, they need to make links with existing knowledge, so that they can process and then understand new material. This sense-making is an active process which can take place during a wide range of learning activities. It can be contrasted with a passive approach to learning in which the teacher primarily talks 'at' students and simply assumes they will make sense of what is said without needing to check."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
-          <div class="session-note"><div class="note-label">Instructor prompt during session</div>"In your notes, write down: what is sense-making? How do I make that happen? And the next question is: how do I design a learning activity that will help the students understand — the function of the learning activity — make sense of things. If I can create that, then that ought to be active learning."</div>
-        </div>
-        <div class="detail-panel" id="detail-metacognition">
-          <div><span class="tag tag-theory">Concept</span><span class="tag tag-source">Pellegrino / Hattie</span></div>
-          <h4 style="margin-top:8px;">Metacognition</h4>
-          <div class="source-quote">"Active learning requires students to think hard and to practise using new knowledge and skills in order to develop long-term recall and a deeper understanding."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
-          <div class="session-note"><div class="note-label">Instructor reflection</div>"There's a big difference between learning how to learn a subject. I think that very many academics overlook how difficult it is to learn how to learn the subject. And a student not knowing how to learn a subject, becoming reliant on the teacher trying to soak up all of the teacher's knowledge — that's a very big difference."</div>
-        </div>
-        <div class="detail-panel" id="detail-cogload">
-          <div><span class="tag tag-theory">Theory</span><span class="tag tag-source">Stetson-Tiligadas / Sweller</span></div>
-          <h4 style="margin-top:8px;">Cognitive load theory</h4>
-          <div class="source-quote">"Cognitive load is considered 'the major factor in determining the success of instructional intervention in attaining transfer of knowledge and skills' (Paas et al., 2005, p. 26). Cognitive load theory points to two types of load on working memory: intrinsic load and extraneous load, and as Sweller (1994) noted, any information that leads to high cognitive load, no matter which type, constitutes a significant challenge to effective learning."<div class="source-attr">Stetson-Tiligadas (2018) — Designing for Active Learning, Ch. 2</div></div>
-          <div class="source-quote">"Extraneous cognitive load is the load placed on working memory, not by the learning content itself, but by instructional methods, activities, and presentation. Sweller (1994) further remarked that 'extraneous cognitive load, by definition, is entirely under instructional control'."<div class="source-attr">Stetson-Tiligadas (2018)</div></div>
-          <div class="session-note"><div class="note-label">Session application</div>If a teacher begins too high up in Bloom's pyramid without establishing the base, "it'll be whoosh — right over their heads." The connection between cognitive load and appropriate sequencing was used to motivate both Bloom's taxonomy and the diagnostic function of ZPD.</div>
-        </div>
+    <div class="section-body" id="body-s2"><div class="section-inner">
+      <p class="body-sm">Select a concept to explore its definition, source text, and how it was discussed in the session.</p>
+      <div class="concept-grid">
+        <div class="concept-card" data-concept="constructivism" onclick="showConcept('constructivism')"><h3>Constructivism</h3><p>How learners build knowledge</p></div>
+        <div class="concept-card" data-concept="zpd" onclick="showConcept('zpd')"><h3>Zone of Proximal Development</h3><p>Where learning should be targeted</p></div>
+        <div class="concept-card" data-concept="scaffolding" onclick="showConcept('scaffolding')"><h3>Scaffolding</h3><p>Temporary support toward independence</p></div>
+        <div class="concept-card" data-concept="sensemaking" onclick="showConcept('sensemaking')"><h3>Sense-making</h3><p>The active process of understanding</p></div>
+        <div class="concept-card" data-concept="metacognition" onclick="showConcept('metacognition')"><h3>Metacognition</h3><p>Thinking about thinking</p></div>
+        <div class="concept-card" data-concept="cogload" onclick="showConcept('cogload')"><h3>Cognitive load</h3><p>Limits on working memory</p></div>
       </div>
-    </div>
+      <div class="detail-panel" id="detail-constructivism">
+        <div><span class="tag tag-theory">Theory</span><span class="tag tag-source">Piaget / Vygotsky</span></div>
+        <h4 style="margin-top:8px;">Constructivism &amp; social constructivism</h4>
+        <div class="source-quote">"Active learning is based on a theory of learning called constructivism, which emphasises the fact that learners construct or build their understanding. Jean Piaget (1896–1980), a psychologist and founder of constructivism, researched the cognitive development of children, observing that their knowledge was individually built up, bit by bit. In the process of making meaning, children replace or adapt their existing knowledge and understanding with deeper levels of understanding."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
+        <div class="source-quote">"The theory of social constructivism says that learning happens primarily through social interaction with others, such as a teacher or a learner's peers."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
+        <div class="session-note"><div class="note-label">Session discussion</div>The instructor used nursing as an example: "Can I become a nurse by myself? It's quite difficult actually." This grounded the distinction between individual and social constructivism in a familiar professional context.</div>
+      </div>
+      <div class="detail-panel" id="detail-zpd">
+        <div><span class="tag tag-theory">Theory</span><span class="tag tag-source">Vygotsky</span></div>
+        <h4 style="margin-top:8px;">Zone of Proximal Development</h4>
+        <div class="source-quote">"Lev Vygotsky (1896–1934) described the zone of proximal development (ZPD). This is the area where learning activities should be focused, lying between what the learner can achieve independently and what the learner can achieve with expert guidance."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
+        <div class="session-note"><div class="note-label">Session framing</div>"There is something that the instructor can do — that the teacher needs to know about the participant or the student — that you have to know where to start and where to go, what they know and what they don't know. And the zone of proximal development is the concept that that's where you want to focus the energy of teaching and learning."</div>
+        <div class="session-note"><div class="note-label">Practical implication raised in session</div>"I need to start my course with a diagnostic." Knowing where students are when they arrive has very real consequences for planning and pacing.</div>
+      </div>
+      <div class="detail-panel" id="detail-scaffolding">
+        <div><span class="tag tag-theory">Theory</span><span class="tag tag-source">Bruner (not Vygotsky)</span></div>
+        <h4 style="margin-top:8px;">Scaffolding</h4>
+        <div class="source-quote">"Scaffolding describes the support a student or group of students receive as they work towards a learning goal. The idea of scaffolding was developed by cognitive psychologist Jerome Bruner (1915–2016) researching oral language acquisition in children. Grounded in social constructivism, the process of scaffolding 'enables a child or novice to solve a problem, carry out a task or achieve a goal which would be beyond his unassisted efforts' (Wood, Bruner &amp; Ross, 1976, p.90). Scaffolding learning is important to secure new knowledge and/or skills but equally, support should be withdrawn over time and when appropriate, to allow students to develop independence."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
+        <div class="session-note"><div class="note-label">Correction made in session</div>The instructor noted that scaffolding is often incorrectly attributed to Vygotsky: "it wasn't actually Vygotsky's idea, but Bruner rather."</div>
+        <div class="session-note"><div class="note-label">Participant definitions generated during session</div>"Scaffolding is a process — when a more experienced person helps another person to master a skill." / "My understanding of scaffolding is providing assistance to develop learning." / "To give support to help someone at the beginning until the person becomes independent."</div>
+        <div class="session-note"><div class="note-label">Instructor synthesis</div>"The best scaffolding — the student always feels independent, but the scaffolding is just the little thing they need... they feel that they are doing it themselves. Perhaps a key word here is also autonomy."</div>
+      </div>
+      <div class="detail-panel" id="detail-sensemaking">
+        <div><span class="tag tag-theory">Concept</span><span class="tag tag-source">Cambridge Assessment</span></div>
+        <h4 style="margin-top:8px;">Sense-making</h4>
+        <div class="source-quote">"For learners to make sense of new information and ideas, they need to make links with existing knowledge, so that they can process and then understand new material. This sense-making is an active process which can take place during a wide range of learning activities. It can be contrasted with a passive approach to learning in which the teacher primarily talks 'at' students and simply assumes they will make sense of what is said without needing to check."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
+        <div class="session-note"><div class="note-label">Instructor prompt during session</div>"In your notes, write down: what is sense-making? How do I make that happen? And the next question is: how do I design a learning activity that will help the students understand — the function of the learning activity — make sense of things. If I can create that, then that ought to be active learning."</div>
+      </div>
+      <div class="detail-panel" id="detail-metacognition">
+        <div><span class="tag tag-theory">Concept</span><span class="tag tag-source">Pellegrino / Hattie</span></div>
+        <h4 style="margin-top:8px;">Metacognition</h4>
+        <div class="source-quote">"Active learning requires students to think hard and to practise using new knowledge and skills in order to develop long-term recall and a deeper understanding."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
+        <div class="session-note"><div class="note-label">Instructor reflection</div>"There's a big difference between learning how to learn a subject. I think that very many academics overlook how difficult it is to learn how to learn the subject. And a student not knowing how to learn a subject, becoming reliant on the teacher trying to soak up all of the teacher's knowledge — that's a very big difference."</div>
+      </div>
+      <div class="detail-panel" id="detail-cogload">
+        <div><span class="tag tag-theory">Theory</span><span class="tag tag-source">Stetson-Tiligadas / Sweller</span></div>
+        <h4 style="margin-top:8px;">Cognitive load theory</h4>
+        <div class="source-quote">"Cognitive load is considered 'the major factor in determining the success of instructional intervention in attaining transfer of knowledge and skills' (Paas et al., 2005, p. 26). Cognitive load theory points to two types of load on working memory: intrinsic load and extraneous load, and as Sweller (1994) noted, any information that leads to high cognitive load, no matter which type, constitutes a significant challenge to effective learning."<div class="source-attr">Stetson-Tiligadas (2018) — Designing for Active Learning, Ch. 2</div></div>
+        <div class="source-quote">"Extraneous cognitive load is the load placed on working memory, not by the learning content itself, but by instructional methods, activities, and presentation. Sweller (1994) further remarked that 'extraneous cognitive load, by definition, is entirely under instructional control'."<div class="source-attr">Stetson-Tiligadas (2018)</div></div>
+        <div class="session-note"><div class="note-label">Session application</div>If a teacher begins too high up in Bloom's pyramid without establishing the base, "it'll be whoosh — right over their heads." The connection between cognitive load and appropriate sequencing was used to motivate both Bloom's taxonomy and the diagnostic function of ZPD.</div>
+      </div>
+    </div></div>
   </div>
 
   <div class="section" id="s3">
@@ -239,30 +229,28 @@ body { font-family: var(--font-sans); }
       <div><div class="section-eyebrow">Framework</div><div class="section-title">Bloom's taxonomy</div></div>
       <div class="chevron" id="chev-s3">▼</div>
     </div>
-    <div class="section-body" id="body-s3">
-      <div class="section-inner">
-        <p class="body-sm">The course literature referenced Bloom's without explaining it. The instructor paused to introduce all three domains. Select a level to expand.</p>
-        <div class="session-note" style="margin-bottom:1rem;"><div class="note-label">Why this detour happened</div>"The course literature also — there's no explanation of Bloom's taxonomy properly here — so perhaps we should find out. Shall we? [...] Bloom's taxonomy is a way to arrange and explain the cognitive difficulty of carrying out different tasks."</div>
-        <p style="font-size:13px;font-weight:500;color:var(--ju-purple);margin-bottom:8px;">Cognitive domain — click a level to expand</p>
-        <div class="bloom-container">
-          <div class="bloom-level" style="background:#f8eef7;" onclick="toggleBloom('bd1')"><div class="bloom-label" style="color:var(--ju-purple-dark);">Remember</div><div class="bloom-examples" style="color:var(--ju-purple-dark);">Recall, recognise, list, name</div></div>
-          <div class="bloom-detail" id="bd1">Recognising and recalling facts. Lower-order thinking. Tasks: naming, listing, identifying.</div>
-          <div class="bloom-level" style="background:#f0dced;" onclick="toggleBloom('bd2')"><div class="bloom-label" style="color:var(--ju-purple-dark);">Understand</div><div class="bloom-examples" style="color:var(--ju-purple-dark);">Summarise, classify, explain</div></div>
-          <div class="bloom-detail" id="bd2">Explaining ideas in your own words. Tasks: summarising, classifying, describing.</div>
-          <div class="bloom-level" style="background:#e5c8e2;" onclick="toggleBloom('bd3')"><div class="bloom-label" style="color:var(--ju-purple-dark);">Apply</div><div class="bloom-examples" style="color:var(--ju-purple-dark);">Implement, execute, use</div></div>
-          <div class="bloom-detail" id="bd3">Using knowledge in new situations. Tasks: solving problems, applying procedures.</div>
-          <div class="bloom-level" style="background:#cc8fc7;" onclick="toggleBloom('bd4')"><div class="bloom-label" style="color:#fff;">Analyse</div><div class="bloom-examples" style="color:rgba(255,255,255,0.85);">Differentiate, organise, relate</div></div>
-          <div class="bloom-detail" id="bd4">Breaking information into parts, finding patterns. Tasks: comparing, deconstructing.</div>
-          <div class="bloom-level" style="background:#b050a0;" onclick="toggleBloom('bd5')"><div class="bloom-label" style="color:#fff;">Evaluate</div><div class="bloom-examples" style="color:rgba(255,255,255,0.85);">Critique, judge, justify</div></div>
-          <div class="bloom-detail" id="bd5">Making judgements based on criteria. Higher-order thinking. Tasks: critiquing, justifying.</div>
-          <div class="bloom-level" style="background:var(--ju-purple);" onclick="toggleBloom('bd6')"><div class="bloom-label" style="color:#fff;">Create</div><div class="bloom-examples" style="color:rgba(255,255,255,0.85);">Design, construct, produce</div></div>
-          <div class="bloom-detail" id="bd6">Producing new or original work. The highest cognitive level. Tasks: designing, constructing, writing.</div>
-        </div>
-        <hr class="divider">
-        <div class="source-quote">"Active learning approaches will help students develop at every stage of Bloom's Taxonomy; it will enable learners to engage with the more complex cognitive processes such as evaluate and create, and build a knowledge base that begins with, but is not limited to, factual knowledge."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
-        <div class="session-note"><div class="note-label">Instructor on sequencing</div>"If a teacher starts at a level way high up in the pyramid when the students are not familiar with the base, it'll be whoosh — right over their heads. [...] What happens if information feels disconnected? Or if it's stupid — you feel stupid. And if you feel stupid, that's not good for learning."</div>
+    <div class="section-body" id="body-s3"><div class="section-inner">
+      <p class="body-sm">The course literature referenced Bloom's without explaining it. The instructor paused to introduce all three domains. Select a level to expand.</p>
+      <div class="session-note" style="margin-bottom:1rem;"><div class="note-label">Why this detour happened</div>"The course literature also — there's no explanation of Bloom's taxonomy properly here — so perhaps we should find out. Shall we? [...] Bloom's taxonomy is a way to arrange and explain the cognitive difficulty of carrying out different tasks."</div>
+      <p style="font-size:14px;font-weight:500;color:var(--ju-purple);margin-bottom:8px;">Cognitive domain — click a level to expand</p>
+      <div class="bloom-container">
+        <div class="bloom-level" style="background:#f8eef7;" onclick="toggleBloom('bd1')"><div class="bloom-label" style="color:var(--ju-purple-dark);">Remember</div><div class="bloom-examples" style="color:var(--ju-purple-dark);">Recall, recognise, list, name</div></div>
+        <div class="bloom-detail" id="bd1">Recognising and recalling facts. Lower-order thinking. Tasks: naming, listing, identifying.</div>
+        <div class="bloom-level" style="background:#f0dced;" onclick="toggleBloom('bd2')"><div class="bloom-label" style="color:var(--ju-purple-dark);">Understand</div><div class="bloom-examples" style="color:var(--ju-purple-dark);">Summarise, classify, explain</div></div>
+        <div class="bloom-detail" id="bd2">Explaining ideas in your own words. Tasks: summarising, classifying, describing.</div>
+        <div class="bloom-level" style="background:#e5c8e2;" onclick="toggleBloom('bd3')"><div class="bloom-label" style="color:var(--ju-purple-dark);">Apply</div><div class="bloom-examples" style="color:var(--ju-purple-dark);">Implement, execute, use</div></div>
+        <div class="bloom-detail" id="bd3">Using knowledge in new situations. Tasks: solving problems, applying procedures.</div>
+        <div class="bloom-level" style="background:#cc8fc7;" onclick="toggleBloom('bd4')"><div class="bloom-label" style="color:#fff;">Analyse</div><div class="bloom-examples" style="color:rgba(255,255,255,0.9);">Differentiate, organise, relate</div></div>
+        <div class="bloom-detail" id="bd4">Breaking information into parts, finding patterns. Tasks: comparing, deconstructing.</div>
+        <div class="bloom-level" style="background:#b050a0;" onclick="toggleBloom('bd5')"><div class="bloom-label" style="color:#fff;">Evaluate</div><div class="bloom-examples" style="color:rgba(255,255,255,0.9);">Critique, judge, justify</div></div>
+        <div class="bloom-detail" id="bd5">Making judgements based on criteria. Higher-order thinking. Tasks: critiquing, justifying.</div>
+        <div class="bloom-level" style="background:var(--ju-purple);" onclick="toggleBloom('bd6')"><div class="bloom-label" style="color:#fff;">Create</div><div class="bloom-examples" style="color:rgba(255,255,255,0.9);">Design, construct, produce</div></div>
+        <div class="bloom-detail" id="bd6">Producing new or original work. The highest cognitive level. Tasks: designing, constructing, writing.</div>
       </div>
-    </div>
+      <hr class="divider">
+      <div class="source-quote">"Active learning approaches will help students develop at every stage of Bloom's Taxonomy; it will enable learners to engage with the more complex cognitive processes such as evaluate and create, and build a knowledge base that begins with, but is not limited to, factual knowledge."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
+      <div class="session-note"><div class="note-label">Instructor on sequencing</div>"If a teacher starts at a level way high up in the pyramid when the students are not familiar with the base, it'll be whoosh — right over their heads. [...] What happens if information feels disconnected? Or if it's stupid — you feel stupid. And if you feel stupid, that's not good for learning."</div>
+    </div></div>
   </div>
 
   <div class="section" id="s4">
@@ -270,19 +258,17 @@ body { font-family: var(--font-sans); }
       <div><div class="section-eyebrow">Teacher roles</div><div class="section-title">Activator vs. facilitator</div></div>
       <div class="chevron" id="chev-s4">▼</div>
     </div>
-    <div class="section-body" id="body-s4">
-      <div class="section-inner">
-        <p class="body-text">One of the most discussed misconceptions about active learning is that it means stepping back. The session addressed this through Hattie's research and the activator/facilitator distinction.</p>
-        <div class="compare-grid">
-          <div class="compare-card winner"><h4>Teacher as activator</h4><ul><li>Direct instruction and modelling</li><li>Teaching metacognition explicitly</li><li>Connecting to prior knowledge</li><li>Diagnosing misconceptions</li></ul><span class="effect-badge">Effect size: 0.60 (Hattie, 2009)</span></div>
-          <div class="compare-card neutral"><h4>Teacher as facilitator</h4><ul><li>Simulations, gaming, discovery</li><li>Students largely self-directed</li><li>Minimal instructor intervention</li><li>Problem-based learning contexts</li></ul><span class="effect-badge">Effect size: 0.17 (Hattie, 2009)</span></div>
-        </div>
-        <div class="source-quote">"Hattie (2009, p.243) distinguishes between the teacher as activator and the teacher as facilitator. As an activator, teachers are key agents in leading strategies which will include direct instruction and teaching metacognition. In contrast, a facilitator role could work better in strategies such as simulations and gaming, and problem-based learning. He reports that the effect size is greater when the teacher acts as an activator (0.60 compared to 0.17 for facilitator)."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
-        <div class="source-quote">"Misconceptions about active learning strategies. Active learning includes a wide range of teaching and learning strategies which do not necessarily involve learners moving around the room or undertaking group work. Active learning is happening if students are thinking hard and relating their new learning to existing ideas in a way that enables them to make progress."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
-        <div class="session-note"><div class="note-label">On visible learning and formative assessment</div>"The idea of gaining information about students' misconceptions, perhaps even foreseeing students' misconceptions, or making them visual — accessible to the instructor — is one of the key points. Sometimes we call it visible learning."</div>
-        <div class="session-note"><div class="note-label">Discussion prompt used in session</div>"How will I, the teacher, the instructor, know whether or not you have understood or not?"</div>
+    <div class="section-body" id="body-s4"><div class="section-inner">
+      <p class="body-text">One of the most discussed misconceptions about active learning is that it means stepping back. The session addressed this through Hattie's research and the activator/facilitator distinction.</p>
+      <div class="compare-grid">
+        <div class="compare-card winner"><h4>Teacher as activator</h4><ul><li>Direct instruction and modelling</li><li>Teaching metacognition explicitly</li><li>Connecting to prior knowledge</li><li>Diagnosing misconceptions</li></ul><span class="effect-badge">Effect size: 0.60 (Hattie, 2009)</span></div>
+        <div class="compare-card neutral"><h4>Teacher as facilitator</h4><ul><li>Simulations, gaming, discovery</li><li>Students largely self-directed</li><li>Minimal instructor intervention</li><li>Problem-based learning contexts</li></ul><span class="effect-badge">Effect size: 0.17 (Hattie, 2009)</span></div>
       </div>
-    </div>
+      <div class="source-quote">"Hattie (2009, p.243) distinguishes between the teacher as activator and the teacher as facilitator. As an activator, teachers are key agents in leading strategies which will include direct instruction and teaching metacognition. In contrast, a facilitator role could work better in strategies such as simulations and gaming, and problem-based learning. He reports that the effect size is greater when the teacher acts as an activator (0.60 compared to 0.17 for facilitator)."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
+      <div class="source-quote">"Misconceptions about active learning strategies. Active learning includes a wide range of teaching and learning strategies which do not necessarily involve learners moving around the room or undertaking group work. Active learning is happening if students are thinking hard and relating their new learning to existing ideas in a way that enables them to make progress."<div class="source-attr">Cambridge Assessment — Active Learning brief</div></div>
+      <div class="session-note"><div class="note-label">On visible learning and formative assessment</div>"The idea of gaining information about students' misconceptions, perhaps even foreseeing students' misconceptions, or making them visual — accessible to the instructor — is one of the key points. Sometimes we call it visible learning."</div>
+      <div class="session-note"><div class="note-label">Discussion prompt used in session</div>"How will I, the teacher, the instructor, know whether or not you have understood or not?"</div>
+    </div></div>
   </div>
 
   <div class="section" id="s5">
@@ -290,15 +276,13 @@ body { font-family: var(--font-sans); }
       <div><div class="section-eyebrow">Strategies</div><div class="section-title">Problem-based vs. problem-centered learning</div></div>
       <div class="chevron" id="chev-s5">▼</div>
     </div>
-    <div class="section-body" id="body-s5">
-      <div class="section-inner">
-        <div class="source-quote">"True problem-based learning presupposes highly trained tutors and a significant investment into facilities and support materials so that a small group of learners, no more than seven, have access to resources as and when they deem appropriate in the course of solving the central problem."<div class="source-attr">Stetson-Tiligadas (2018), citing Barrows (2002)</div></div>
-        <div class="source-quote">"Problem-centered learning does not require a rigid process and can be used to describe learning environments where knowledge and skills are acquired through solving authentic problems with appropriate support and scaffolding used when necessary."<div class="source-attr">Stetson-Tiligadas (2018)</div></div>
-        <div class="source-quote">"Learning is promoted when: (1) learners work with authentic problems, (2) new knowledge is introduced after prior knowledge has been activated, (3) new knowledge is demonstrated to the learner (rather than simply being told to the learner), (4) the learner can practice applying the new knowledge, and (5) there is integration of the new knowledge into the learner's context."<div class="source-attr">Merrill (2002) — First Principles of Instruction, as summarised in Stetson-Tiligadas</div></div>
-        <div class="session-note"><div class="note-label">Session discussion — practical reality</div>A participant raised the challenge of motivation in larger groups: "If we have a discussion forum, not all students enter into the discussion forum. So how do we make people really wanting to engage and wanting to be active?"</div>
-        <div class="session-note"><div class="note-label">Instructor framing for the rest of the course</div>"As we move on through the course, we're going to use our understanding of the concept, and then we're going to go on a hunt for specific strategies like these, that work in our context. Because maybe problem-based learning with a small group of seven perhaps isn't the optimal choice for everybody."</div>
-      </div>
-    </div>
+    <div class="section-body" id="body-s5"><div class="section-inner">
+      <div class="source-quote">"True problem-based learning presupposes highly trained tutors and a significant investment into facilities and support materials so that a small group of learners, no more than seven, have access to resources as and when they deem appropriate in the course of solving the central problem."<div class="source-attr">Stetson-Tiligadas (2018), citing Barrows (2002)</div></div>
+      <div class="source-quote">"Problem-centered learning does not require a rigid process and can be used to describe learning environments where knowledge and skills are acquired through solving authentic problems with appropriate support and scaffolding used when necessary."<div class="source-attr">Stetson-Tiligadas (2018)</div></div>
+      <div class="source-quote">"Learning is promoted when: (1) learners work with authentic problems, (2) new knowledge is introduced after prior knowledge has been activated, (3) new knowledge is demonstrated to the learner (rather than simply being told to the learner), (4) the learner can practice applying the new knowledge, and (5) there is integration of the new knowledge into the learner's context."<div class="source-attr">Merrill (2002) — First Principles of Instruction, as summarised in Stetson-Tiligadas</div></div>
+      <div class="session-note"><div class="note-label">Session discussion — practical reality</div>A participant raised the challenge of motivation in larger groups: "If we have a discussion forum, not all students enter into the discussion forum. So how do we make people really wanting to engage and wanting to be active?"</div>
+      <div class="session-note"><div class="note-label">Instructor framing for the rest of the course</div>"As we move on through the course, we're going to use our understanding of the concept, and then we're going to go on a hunt for specific strategies like these, that work in our context. Because maybe problem-based learning with a small group of seven perhaps isn't the optimal choice for everybody."</div>
+    </div></div>
   </div>
 
   <div class="section" id="s6">
@@ -306,15 +290,13 @@ body { font-family: var(--font-sans); }
       <div><div class="section-eyebrow">Your notes</div><div class="section-title">Reflection prompts from the session</div></div>
       <div class="chevron" id="chev-s6">▼</div>
     </div>
-    <div class="section-body" id="body-s6">
-      <div class="section-inner">
-        <p class="body-sm">These are the prompts the instructor used during the session. Use them to complete or revisit your notes.</p>
-        <div class="reflection-box"><div class="reflection-prompt">Prompt 1</div><p>Are the skills identified in the global frameworks the skills we actually teach today? Take a stance.</p><textarea placeholder="Your notes..."></textarea></div>
-        <div class="reflection-box" style="margin-top:1rem;"><div class="reflection-prompt">Prompt 2</div><p>How will the teacher know whether or not students have understood?</p><textarea placeholder="Your notes..."></textarea></div>
-        <div class="reflection-box" style="margin-top:1rem;"><div class="reflection-prompt">Prompt 3</div><p>Write your own definition of scaffolding in your own words.</p><textarea placeholder="Your notes..."></textarea></div>
-        <div class="reflection-box" style="margin-top:1rem;"><div class="reflection-prompt">Prompt 4</div><p>What does "sense-making" mean, and how do you design a learning activity that promotes it?</p><textarea placeholder="Your notes..."></textarea></div>
-      </div>
-    </div>
+    <div class="section-body" id="body-s6"><div class="section-inner">
+      <p class="body-sm">These are the prompts the instructor used during the session. Use them to complete or revisit your notes.</p>
+      <div class="reflection-box"><div class="reflection-prompt">Prompt 1</div><p>Are the skills identified in the global frameworks the skills we actually teach today? Take a stance.</p><textarea placeholder="Your notes..."></textarea></div>
+      <div class="reflection-box" style="margin-top:1rem;"><div class="reflection-prompt">Prompt 2</div><p>How will the teacher know whether or not students have understood?</p><textarea placeholder="Your notes..."></textarea></div>
+      <div class="reflection-box" style="margin-top:1rem;"><div class="reflection-prompt">Prompt 3</div><p>Write your own definition of scaffolding in your own words.</p><textarea placeholder="Your notes..."></textarea></div>
+      <div class="reflection-box" style="margin-top:1rem;"><div class="reflection-prompt">Prompt 4</div><p>What does "sense-making" mean, and how do you design a learning activity that promotes it?</p><textarea placeholder="Your notes..."></textarea></div>
+    </div></div>
   </div>
 
 </div>
@@ -322,48 +304,29 @@ body { font-family: var(--font-sans); }
 <script>
 const sections = ['s0','s1','s2','s3','s4','s5','s6'];
 const openSections = new Set();
-
 function toggleSection(id) {
-  const body = document.getElementById('body-' + id);
-  const chev = document.getElementById('chev-' + id);
-  const sec = document.getElementById(id);
-  if (openSections.has(id)) {
-    openSections.delete(id);
-    body.classList.remove('open');
-    chev.classList.remove('open');
-    sec.classList.remove('open');
-  } else {
-    openSections.add(id);
-    body.classList.add('open');
-    chev.classList.add('open');
-    sec.classList.add('open');
-  }
-  document.getElementById('progressBar').style.width = Math.round((openSections.size / sections.length) * 100) + '%';
+  const body = document.getElementById('body-'+id), chev = document.getElementById('chev-'+id), sec = document.getElementById(id);
+  if (openSections.has(id)) { openSections.delete(id); body.classList.remove('open'); chev.classList.remove('open'); sec.classList.remove('open'); }
+  else { openSections.add(id); body.classList.add('open'); chev.classList.add('open'); sec.classList.add('open'); }
+  document.getElementById('progressBar').style.width = Math.round((openSections.size/sections.length)*100)+'%';
 }
-
 document.querySelectorAll('.nav-pill').forEach(pill => {
   pill.addEventListener('click', function() {
     const target = this.dataset.target;
     document.querySelectorAll('.nav-pill').forEach(p => p.classList.remove('active'));
     this.classList.add('active');
     const el = document.getElementById(target);
-    if (el) {
-      if (!openSections.has(target)) toggleSection(target);
-      setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
-    }
+    if (el) { if (!openSections.has(target)) toggleSection(target); setTimeout(() => el.scrollIntoView({behavior:'smooth',block:'start'}), 50); }
   });
 });
-
 function showConcept(id) {
   document.querySelectorAll('.detail-panel').forEach(p => p.classList.remove('visible'));
   document.querySelectorAll('.concept-card').forEach(c => c.classList.remove('active'));
-  document.getElementById('detail-' + id).classList.add('visible');
-  document.querySelector('[data-concept="' + id + '"]').classList.add('active');
+  document.getElementById('detail-'+id).classList.add('visible');
+  document.querySelector('[data-concept="'+id+'"]').classList.add('active');
 }
-
 function toggleBloom(detailId) {
-  const detail = document.getElementById(detailId);
-  const isOpen = detail.classList.contains('visible');
+  const detail = document.getElementById(detailId), isOpen = detail.classList.contains('visible');
   document.querySelectorAll('.bloom-detail').forEach(d => d.classList.remove('visible'));
   if (!isOpen) detail.classList.add('visible');
 }
